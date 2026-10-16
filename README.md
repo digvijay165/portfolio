@@ -1,10 +1,10 @@
 <div align="center">
 
-# 🌌 3D Developer Portfolio
+# 🌌 Hi, I'm Digvijay — 3D Developer Portfolio
 
-### *Front-end developer · React · TypeScript · Three.js*
+### *Front-End Developer · Civic-tech builder · React · TypeScript · Three.js*
 
-An immersive, interactive portfolio built with **Three.js**, custom **GLSL shaders**, and cinematic page transitions, all with zero build steps.
+An immersive portfolio with a **live 3D scene**, custom **GLSL shaders**, and cinematic page transitions, built with plain HTML, CSS, and JavaScript. No build step.
 
 [![Live Site](https://img.shields.io/badge/🚀_Live_Site-Visit_Portfolio-22d3ee?style=for-the-badge&labelColor=0b0b14)](https://digvijay165.github.io/portfolio/)
 
@@ -21,8 +21,10 @@ An immersive, interactive portfolio built with **Three.js**, custom **GLSL shade
 <br>
 
 <a href="https://digvijay165.github.io/portfolio/">
-  <img src="portfolio-screenshot.png" alt="3D portfolio preview" width="100%">
+  <img src="portfolio-screenshot.png" alt="3D portfolio hero: Hi, I'm Digvijay, with a glowing 3D core and orbiting tech labels" width="100%">
 </a>
+
+<sub>👆 Click the preview to open the live site</sub>
 
 </div>
 
@@ -30,26 +32,26 @@ An immersive, interactive portfolio built with **Three.js**, custom **GLSL shade
 
 ## 📖 About
 
-This is my personal developer portfolio: a single-page experience where a **live 3D scene** reacts to your mouse and scroll, sections transition with a **curtain wipe and warp-speed star streak**, and my latest GitHub projects load **live from the GitHub API**.
+This is my personal portfolio. A **glowing 3D core** with my tech stack orbiting around it reacts to your mouse and scroll. Sections change with a **curtain wipe and warp-speed star streak**, and my latest GitHub projects load **live from the GitHub API**.
 
-It's built with plain HTML, CSS, and JavaScript, with Three.js loaded through an import map, so there's **no `npm install` and no build step**.
+Three.js loads straight from a CDN through an import map, so there's **no `npm install` and no build step**. Clone it, serve it, done.
 
 > 🔗 **Visit:** [digvijay165.github.io/portfolio](https://digvijay165.github.io/portfolio/)
 
 ---
 
-## ✨ Features
+## ✨ Highlights
 
-| | Feature | Description |
+| | Feature | What it does |
 | :---: | --- | --- |
-| 🧊 | **3D tech core** | A morphing icosahedron with a custom GLSL simplex-noise shader, wireframe shell, orbit rings, and my tech stack orbiting as 3D labels |
-| 🌠 | **Particle starfield** | 2,600 coloured particles and a scrolling neon grid that react to the mouse and scroll |
+| 🧊 | **3D tech core** | Morphing icosahedron with a custom GLSL simplex-noise shader, wireframe shell, orbit rings, and orbiting 3D labels (JavaScript, TypeScript, React, Three.js, Node.js, Git…) |
+| 🌠 | **Particle starfield** | 2,600 coloured particles and a scrolling neon grid that respond to the mouse and scroll |
 | 🎬 | **Page transitions** | Staggered 5-panel curtain wipe, warp-speed star streak, and FOV punch in the 3D scene |
-| ⏳ | **Preloader** | Boot-sequence counter that wipes away to reveal the site |
+| ⏳ | **Boot preloader** | A terminal-style `booting ui` counter that wipes away to reveal the site |
 | 🔤 | **Text effects** | Scramble/decode name, typewriter roles, and an animated terminal "about" card |
-| 🃏 | **3D tilt cards** | Perspective tilt and cursor-following spotlight on skill and project cards |
+| 🃏 | **3D tilt cards** | Perspective tilt and a cursor-following spotlight on skill and project cards |
 | 🧲 | **Micro-interactions** | Custom cursor, magnetic buttons, blur scroll-reveals, animated skill meters, outlined marquee |
-| 📡 | **Live GitHub feed** | Latest public repos from the GitHub API, with an offline fallback |
+| 📡 | **Live GitHub feed** | Pulls my latest public repos from the GitHub API, with an offline fallback |
 | 📱 | **Responsive & accessible** | Mobile circle-reveal menu, `prefers-reduced-motion` support, semantic HTML |
 | 🔍 | **SEO-ready** | `sitemap.xml`, `robots.txt`, and a custom `404.html` page |
 
@@ -57,25 +59,27 @@ It's built with plain HTML, CSS, and JavaScript, with Three.js loaded through an
 
 ## 🗺️ Site Sections
 
-| Section | What's inside |
-| --- | --- |
-| 🏠 **Home** | Hero with the 3D core, scrambled name, and typewriter roles |
-| 👤 **About** | Animated terminal-style intro card |
-| 🛠️ **Skills** | Tilt cards with animated skill meters |
-| 🚀 **Projects** | Featured work plus a live GitHub repo feed |
-| 📬 **Contact** | Email, social links, and a "say hello" option |
+| # | Section | What's inside |
+| :---: | --- | --- |
+| 00 | 🏠 **Home** | Hero with the 3D core, scrambled name, typewriter roles, and quick links |
+| 01 | 👤 **About** | Animated terminal-style intro card |
+| 02 | 🛠️ **Stack** | Tilt cards with animated skill meters |
+| 03 | 🚀 **Projects** | Featured work plus a live GitHub repo feed |
+| 04 | 📬 **Contact** | Email, Instagram, and a "say hello" option |
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **HTML5**: semantic page structure
-- **CSS3**: custom properties, keyframe animations, and transitions
-- **Vanilla JavaScript (ES Modules)**: interactions, loader, and GitHub feed
-- **Three.js r160**: 3D scene, loaded from CDN with an import map
-- **GLSL**: custom simplex-noise vertex and fragment shaders
-- **GitHub REST API**: live repository feed
-- **GitHub Pages**: hosting with automatic deploys
+| Layer | Technology |
+| --- | --- |
+| Structure | **HTML5**, semantic markup |
+| Styling | **CSS3**: custom properties, keyframes, transitions |
+| Logic | **Vanilla JavaScript** (ES Modules) |
+| 3D | **Three.js r160** via CDN import map |
+| Shaders | **GLSL** simplex-noise vertex and fragment shaders |
+| Data | **GitHub REST API** for the live repo feed |
+| Hosting | **GitHub Pages** with automatic deploys |
 
 ---
 
@@ -93,14 +97,14 @@ portfolio/
 ├── assets/
 │   └── favicon.svg
 ├── .github/ISSUE_TEMPLATE/      # "Say hello" contact template
-├── robots.txt · sitemap.xml · .nojekyll
 ├── portfolio-screenshot.png     # README preview image
+├── robots.txt · sitemap.xml · .nojekyll
 └── LICENSE
 ```
 
 ---
 
-## 🚀 Getting Started
+## 🚀 Run Locally
 
 ES modules need an HTTP server, so opening `index.html` directly (`file://`) won't work.
 
@@ -120,20 +124,20 @@ Then open `http://localhost:8000`, or the port shown.
 
 ---
 
-## 🎨 Customise
+## 🎨 Make It Yours
 
-| What | Where |
+| Want to change… | Edit this |
 | --- | --- |
 | ✏️ Text and projects | `index.html` |
 | 🎨 Colours | CSS variables at the top of `css/style.css` (`--accent`, `--accent-2`, …) |
-| 🏷️ 3D orbiting labels | The `stack` array in `js/scene.js` |
+| 🏷️ Orbiting 3D labels | The `stack` array in `js/scene.js` |
 | 👤 GitHub feed user | `GITHUB_USER` in `js/main.js` |
 
 ---
 
 ## 🌐 Deployment
 
-Deployed on **GitHub Pages**, and every push to `main` redeploys automatically.
+Hosted on **GitHub Pages**, and every push to `main` redeploys automatically.
 
 | Setting | Value |
 | --- | --- |
@@ -141,11 +145,13 @@ Deployed on **GitHub Pages**, and every push to `main` redeploys automatically.
 | Source | **Settings → Pages →** *Deploy from a branch* → `main` / `(root)` |
 | Build command | *None* |
 
-> 💡 It also works on **Vercel** or **Netlify** as a static site, with no configuration.
+> 💡 Also works on **Vercel** or **Netlify** as a static site, with no configuration.
 
 ---
 
-## 📬 Contact
+## 📬 Let's Connect
+
+I'm **available for front-end roles, internships, and collaborations**.
 
 [![Gmail](https://img.shields.io/badge/Gmail-digvijaysingh5360%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:digvijaysingh5360@gmail.com)
 [![Instagram](https://img.shields.io/badge/Instagram-@digvijay.singh__-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/digvijay.singh_)
@@ -157,7 +163,7 @@ Or open an [issue](https://github.com/digvijay165/portfolio/issues/new/choose) t
 
 ## 📄 License
 
-This project is licensed under the **MIT License**. See [`LICENSE`](./LICENSE) for details.
+Released under the **MIT License**. See [`LICENSE`](./LICENSE) for details.
 
 ---
 
