@@ -1,200 +1,183 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Digvijay — Front-End Developer</title>
-  <meta name="description" content="Digvijay — front-end developer from India building responsive interfaces, civic-tech prototypes and zero-install browser tools with React, TypeScript and JavaScript." />
-  <meta name="theme-color" content="#05060a" />
-  <meta property="og:title" content="Digvijay — Front-End Developer" />
-  <meta property="og:description" content="Responsive interfaces, civic-tech prototypes and browser tools." />
+  <title>Digvijay Singh — Front-End Developer</title>
+  <meta name="description" content="Digvijay Singh — student and front-end developer from Kota, India. React, TypeScript, Node.js and Postgres apps, Smart India Hackathon 2026, and DSA in C++ and Java." />
+  <meta name="theme-color" content="#05070f" />
+  <meta property="og:title" content="Digvijay Singh — Front-End Developer" />
+  <meta property="og:description" content="Fast, friendly web apps: travel planners, 3D book readers, GST billing and civic-tech." />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://digvijay165.github.io/portfolio/" />
   <meta property="og:image" content="https://avatars.githubusercontent.com/u/208164292?v=4" />
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
-  <script type="importmap">
-    { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" } }
-  </script>
+  <script>document.documentElement.classList.add("js"); try { const t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}</script>
+  <script src="js/data.js"></script>
+  <script src="js/components.js"></script>
 </head>
-<body class="is-loading">
-  <!-- Preloader -->
-  <div class="loader" id="loader" aria-hidden="true">
-    <div class="loader__inner">
-      <div class="loader__code"><span class="accent">&gt;</span> booting <span id="loaderTask">kernel</span><span class="blink">_</span></div>
-      <div class="loader__count"><span id="loaderCount">0</span>%</div>
-      <div class="loader__bar"><span id="loaderBar"></span></div>
-    </div>
-  </div>
+<body data-page="home" id="top">
+  <site-bg></site-bg>
+  <site-header></site-header>
 
-  <!-- Page transition curtain -->
-  <div class="curtain" id="curtain" aria-hidden="true">
-    <span></span><span></span><span></span><span></span><span></span>
-    <div class="curtain__label" id="curtainLabel">/home</div>
-  </div>
-
-  <div class="cursor" id="cursor" aria-hidden="true"></div>
-  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
-
-  <canvas id="bg3d" aria-hidden="true"></canvas>
-  <div class="grain" aria-hidden="true"></div>
-
-  <header class="nav" id="nav">
-    <a href="#home" class="nav__logo" data-transition>&lt;DV /&gt;</a>
-    <nav class="nav__links" id="navLinks">
-      <a href="#about" data-transition><span>01.</span>About</a>
-      <a href="#skills" data-transition><span>02.</span>Stack</a>
-      <a href="#projects" data-transition><span>03.</span>Projects</a>
-      <a href="#contact" data-transition><span>04.</span>Contact</a>
-    </nav>
-    <button class="nav__burger" id="burger" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span></button>
-  </header>
-
-  <main>
-    <!-- HERO -->
-    <section class="hero" id="home">
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero wrap">
       <div class="hero__content">
-        <p class="hero__tag reveal"><span class="pulse"></span> Available for front-end roles &amp; collabs</p>
+        <p class="chip" data-reveal><span class="pulse"></span> Open to internships · Kota, India</p>
         <h1 class="hero__title">
-          <span class="line"><span class="reveal-up">Hi, I'm</span></span>
-          <span class="line"><span class="reveal-up gradient" data-scramble>Digvijay</span></span>
+          <span class="hero__hi" data-reveal>Hi there, I'm</span>
+          <span class="line"><span class="split" data-scramble>Digvijay</span></span>
+          <span class="line"><span class="split gradient-text" style="--sd:.25s">Singh.</span></span>
         </h1>
-        <p class="hero__role reveal">
-          Front-End Developer · <span class="typed" id="typed"></span><span class="blink">|</span>
+        <p class="hero__role" data-reveal aria-label="Front-end developer">
+          <span class="mono">&gt;</span> <span id="typed"></span><span class="caret"></span>
         </p>
-        <p class="hero__lead reveal">
-          I build responsive, clean interfaces, civic-tech prototypes and zero-friction browser tools that just run, with no installs and no sign-ups.
+        <p class="hero__lead" data-reveal>
+          I turn everyday problems into <strong>fast, friendly web apps</strong>: a Himalayan travel planner,
+          a book reader with real 3D page turns, GST billing for a real workshop, and a land-records
+          portal for Smart India Hackathon 2026.
         </p>
-        <div class="hero__cta reveal">
-          <a href="#projects" class="btn btn--primary magnetic" data-transition>View Projects <span>→</span></a>
-          <a href="https://github.com/digvijay165" target="_blank" rel="noopener" class="btn btn--ghost magnetic">GitHub</a>
+        <div class="hero__cta" data-reveal>
+          <a href="projects.html" class="btn btn--primary magnetic"><span>Explore my work</span><svg class="ico"><use href="assets/icons.svg#i-arrow"/></svg></a>
+          <a href="contact.html" class="btn btn--glass magnetic"><span>Let's talk</span></a>
         </div>
-        <div class="hero__social reveal">
-          <a href="mailto:digvijaysingh5360@gmail.com" aria-label="Email">✉ Gmail</a>
-          <a href="https://instagram.com/digvijay.singh_" target="_blank" rel="noopener" aria-label="Instagram">◎ Instagram</a>
-        </div>
+        <ul class="hero__social" data-reveal>
+          <li><a href="https://github.com/digvijay165" target="_blank" rel="noopener" aria-label="GitHub" data-tip="GitHub"><svg class="ico"><use href="assets/icons.svg#i-github"/></svg></a></li>
+          <li><a href="https://www.linkedin.com/in/digvijay-singh-a188b1382/" target="_blank" rel="noopener" aria-label="LinkedIn" data-tip="LinkedIn"><svg class="ico"><use href="assets/icons.svg#i-linkedin"/></svg></a></li>
+          <li><a href="https://leetcode.com/u/DIGVIJAY5360/" target="_blank" rel="noopener" aria-label="LeetCode" data-tip="LeetCode"><svg class="ico"><use href="assets/icons.svg#i-leetcode"/></svg></a></li>
+          <li><a href="https://www.instagram.com/digvijay.singh_" target="_blank" rel="noopener" aria-label="Instagram" data-tip="Instagram"><svg class="ico"><use href="assets/icons.svg#i-instagram"/></svg></a></li>
+          <li><a href="mailto:digvijaysingh5360@gmail.com" aria-label="Email" data-tip="Email"><svg class="ico"><use href="assets/icons.svg#i-mail"/></svg></a></li>
+        </ul>
       </div>
-      <div class="hero__hud reveal" aria-hidden="true">
-        <div><span>LOC</span> India</div>
-        <div><span>STACK</span> React · TS</div>
-        <div><span>STATUS</span> <em class="ok">online</em></div>
-      </div>
-      <a href="#about" class="scroll-hint" data-transition aria-label="Scroll down"><span></span></a>
-    </section>
 
-    <!-- ABOUT -->
-    <section class="section" id="about">
-      <h2 class="section__title reveal"><span>01.</span> About me</h2>
-      <div class="about">
-        <div class="about__text reveal">
-          <p>I'm a <strong>front-end developer based in India</strong> who enjoys turning ideas into fast, accessible interfaces that feel good to use.</p>
-          <p>Right now I'm polishing <strong>Terra Trust</strong> for <strong>Smart India Hackathon 2026</strong>, an AI-verified land-records portal, and going deeper into <strong>advanced TypeScript</strong> patterns and <strong>accessibility (a11y)</strong>.</p>
-          <p>Most of my projects run straight in the browser with zero setup, because the best UX starts before the first click.</p>
-          <div class="stats">
-            <div class="stat"><b data-count="5">0</b><span>Public repos</span></div>
-            <div class="stat"><b data-count="4">0</b><span>Shipped apps</span></div>
-            <div class="stat"><b data-count="1">0</b><span>Hackathon build</span></div>
+      <div class="hero__visual" data-reveal="zoom">
+        <div class="orbit">
+          <div class="orbit__ring orbit__ring--outer">
+            <span class="orb" style="--a:0deg"><img src="https://skillicons.dev/icons?i=react" alt="React" /></span>
+            <span class="orb" style="--a:72deg"><img src="https://skillicons.dev/icons?i=ts" alt="TypeScript" /></span>
+            <span class="orb" style="--a:144deg"><img src="https://skillicons.dev/icons?i=nodejs" alt="Node.js" /></span>
+            <span class="orb" style="--a:216deg"><img src="https://skillicons.dev/icons?i=postgres" alt="PostgreSQL" /></span>
+            <span class="orb" style="--a:288deg"><img src="https://skillicons.dev/icons?i=threejs" alt="Three.js" /></span>
+          </div>
+          <div class="orbit__ring orbit__ring--inner">
+            <span class="orb" style="--a:30deg"><img src="https://skillicons.dev/icons?i=js" alt="JavaScript" /></span>
+            <span class="orb" style="--a:150deg"><img src="https://skillicons.dev/icons?i=cpp" alt="C++" /></span>
+            <span class="orb" style="--a:270deg"><img src="https://skillicons.dev/icons?i=tailwind" alt="Tailwind CSS" /></span>
+          </div>
+          <div class="avatar">
+            <div class="avatar__ring"></div>
+            <img src="https://avatars.githubusercontent.com/u/208164292?v=4" alt="Digvijay Singh" width="220" height="220" />
           </div>
         </div>
-        <div class="terminal reveal tilt">
-          <div class="terminal__bar"><i></i><i></i><i></i><span>digvijay@dev: ~</span></div>
-          <pre class="terminal__body" id="terminal"></pre>
-        </div>
-      </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section class="section" id="skills">
-      <h2 class="section__title reveal"><span>02.</span> Tech stack</h2>
-      <div class="skills">
-        <div class="skill-card reveal tilt" style="--c:#61dafb"><div class="skill-card__icon">⚛</div><h3>React 18</h3><p>Component-driven UIs, hooks, state</p><div class="meter"><span style="--w:85%"></span></div></div>
-        <div class="skill-card reveal tilt" style="--c:#3178c6"><div class="skill-card__icon">TS</div><h3>TypeScript</h3><p>Typed, maintainable front-ends</p><div class="meter"><span style="--w:70%"></span></div></div>
-        <div class="skill-card reveal tilt" style="--c:#f7df1e"><div class="skill-card__icon">JS</div><h3>JavaScript</h3><p>ES2023, DOM, Web APIs</p><div class="meter"><span style="--w:90%"></span></div></div>
-        <div class="skill-card reveal tilt" style="--c:#e34f26"><div class="skill-card__icon">&lt;/&gt;</div><h3>HTML5</h3><p>Semantic, accessible markup</p><div class="meter"><span style="--w:95%"></span></div></div>
-        <div class="skill-card reveal tilt" style="--c:#2965f1"><div class="skill-card__icon">#</div><h3>CSS3</h3><p>Responsive layouts, animation</p><div class="meter"><span style="--w:90%"></span></div></div>
-        <div class="skill-card reveal tilt" style="--c:#68a063"><div class="skill-card__icon">⬢</div><h3>Node.js</h3><p>Tooling, scripts, small APIs</p><div class="meter"><span style="--w:60%"></span></div></div>
-        <div class="skill-card reveal tilt" style="--c:#f05032"><div class="skill-card__icon">⎇</div><h3>Git &amp; GitHub</h3><p>Branching, PRs, Pages</p><div class="meter"><span style="--w:80%"></span></div></div>
-        <div class="skill-card reveal tilt" style="--c:#ffffff"><div class="skill-card__icon">▲</div><h3>Vercel / Render</h3><p>Deploys, previews, hosting</p><div class="meter"><span style="--w:75%"></span></div></div>
-      </div>
-      <div class="marquee" aria-hidden="true">
-        <div class="marquee__track">
-          <span>React</span><span>TypeScript</span><span>JavaScript</span><span>HTML5</span><span>CSS3</span><span>Node.js</span><span>Three.js</span><span>Git</span><span>VS Code</span><span>Vercel</span><span>a11y</span>
-          <span>React</span><span>TypeScript</span><span>JavaScript</span><span>HTML5</span><span>CSS3</span><span>Node.js</span><span>Three.js</span><span>Git</span><span>VS Code</span><span>Vercel</span><span>a11y</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section class="section" id="projects">
-      <h2 class="section__title reveal"><span>03.</span> Featured projects</h2>
-      <div class="projects">
-        <article class="project reveal tilt" style="--c:#22d3a6">
-          <div class="project__head"><span class="project__badge">SIH 2026</span><span class="project__num">01</span></div>
-          <h3>Terra Trust</h3>
-          <p>AI-verified land records &amp; citizen services portal. Search by name, village or khasra number with GIS pin and scan preview, a live 4-stage application tracker and an English/Hindi toggle.</p>
-          <ul class="tags"><li>React</li><li>Civic-tech</li><li>i18n</li><li>GIS</li></ul>
-          <div class="project__links"><a href="https://github.com/digvijay165/terra-trust" target="_blank" rel="noopener">Source ↗</a></div>
-        </article>
-        <article class="project reveal tilt" style="--c:#a855f7">
-          <div class="project__head"><span class="project__badge">Music</span><span class="project__num">02</span></div>
-          <h3>Pulse Player</h3>
-          <p>Browser-based music discovery player on the iTunes Search API. Reorderable queue, shuffle and repeat, 0.5×–4× speed, on-device favorites and keyboard shortcuts.</p>
-          <ul class="tags"><li>JavaScript</li><li>REST API</li><li>LocalStorage</li></ul>
-          <div class="project__links"><a href="https://pulse-player-0rdw.onrender.com" target="_blank" rel="noopener">Live ↗</a><a href="https://github.com/digvijay165/pulse-player" target="_blank" rel="noopener">Source ↗</a></div>
-        </article>
-        <article class="project reveal tilt" style="--c:#38bdf8">
-          <div class="project__head"><span class="project__badge">Tool</span><span class="project__num">03</span></div>
-          <h3>Calcu</h3>
-          <p>Scientific calculator with trig, logs, factorials, DEG/RAD modes, memory keys (MC, MR, M+, M−), a 40-entry history and light/dark themes.</p>
-          <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
-          <div class="project__links"><a href="https://calculator-7rgb.onrender.com" target="_blank" rel="noopener">Live ↗</a><a href="https://github.com/digvijay165/calculator" target="_blank" rel="noopener">Source ↗</a></div>
-        </article>
-        <article class="project reveal tilt" style="--c:#f59e0b">
-          <div class="project__head"><span class="project__badge">3D Web</span><span class="project__num">04</span></div>
-          <h3>This Portfolio</h3>
-          <p>Interactive 3D portfolio built with Three.js: a reactive tech core, particle field, curtain page transitions, scroll reveals and a live GitHub feed.</p>
-          <ul class="tags"><li>Three.js</li><li>WebGL</li><li>CSS animation</li></ul>
-          <div class="project__links"><a href="https://github.com/digvijay165/portfolio" target="_blank" rel="noopener">Source ↗</a></div>
-        </article>
-      </div>
-
-      <h3 class="subhead reveal">Live from GitHub</h3>
-      <div class="repos" id="repos"><p class="muted">Fetching repositories…</p></div>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="section contact" id="contact">
-      <h2 class="section__title reveal"><span>04.</span> Let's build something</h2>
-      <p class="contact__lead reveal">I'm open to front-end roles, freelance work and hackathon teams. Drop me an email or DM, and I'll get back to you.</p>
-      <div class="contact__cta reveal">
-        <a class="btn btn--primary magnetic" href="mailto:digvijaysingh5360@gmail.com">Say hello ✉</a>
-      </div>
-      <div class="socials">
-        <a class="social reveal tilt" href="mailto:digvijaysingh5360@gmail.com" style="--c:#ea4335">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Zm0 2v.4l8 5.1 8-5.1V7H4Zm16 2.8-7.5 4.8a1 1 0 0 1-1 0L4 9.8V17h16V9.8Z"/></svg>
-          <span><b>Gmail</b><small>digvijaysingh5360@gmail.com</small></span>
+        <a href="code.html" class="float-card glass float-card--a" data-tilt>
+          <span class="float-card__icon" style="--c:#ffa116"><svg class="ico"><use href="assets/icons.svg#i-leetcode"/></svg></span>
+          <span><b data-count="56" data-lc="total">0</b><small>LeetCode solved</small></span>
         </a>
-        <a class="social reveal tilt" href="https://instagram.com/digvijay.singh_" target="_blank" rel="noopener" style="--c:#e1306c">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm5.5-3.2a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4ZM7.5 2h9A5.5 5.5 0 0 1 22 7.5v9a5.5 5.5 0 0 1-5.5 5.5h-9A5.5 5.5 0 0 1 2 16.5v-9A5.5 5.5 0 0 1 7.5 2Zm0 2A3.5 3.5 0 0 0 4 7.5v9A3.5 3.5 0 0 0 7.5 20h9a3.5 3.5 0 0 0 3.5-3.5v-9A3.5 3.5 0 0 0 16.5 4h-9Z"/></svg>
-          <span><b>Instagram</b><small>@digvijay.singh_</small></span>
+        <a href="projects.html" class="float-card glass float-card--b" data-tilt>
+          <span class="float-card__icon" style="--c:#22d3ee"><svg class="ico"><use href="assets/icons.svg#i-grid"/></svg></span>
+          <span><b data-count="11" data-project-total>0</b><small>Projects shipped</small></span>
         </a>
-        <a class="social reveal tilt" href="https://github.com/digvijay165" target="_blank" rel="noopener" style="--c:#e6e9f2">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.7c-2.8.6-3.4-1.3-3.4-1.3-.4-1.2-1.1-1.5-1.1-1.5-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.6 2.4 1.1 3 .9.1-.7.4-1.1.6-1.4-2.2-.3-4.6-1.1-4.6-5a3.9 3.9 0 0 1 1-2.7c-.1-.3-.4-1.3.1-2.7 0 0 .8-.3 2.8 1a9.6 9.6 0 0 1 5 0c1.9-1.3 2.8-1 2.8-1 .5 1.4.2 2.4.1 2.7a3.9 3.9 0 0 1 1 2.7c0 3.9-2.3 4.7-4.6 5 .4.3.7.9.7 1.9V21c0 .3.2.6.7.5A10 10 0 0 0 12 2Z"/></svg>
-          <span><b>GitHub</b><small>@digvijay165</small></span>
+        <a href="project.html?p=terra-trust" class="float-card glass float-card--c" data-tilt>
+          <span class="float-card__icon" style="--c:#ff5fa2"><svg class="ico"><use href="assets/icons.svg#i-star"/></svg></span>
+          <span><b>SIH '26</b><small>Hackathon build</small></span>
         </a>
       </div>
+
+      <a href="#hub" class="scroll-cue" aria-label="Scroll down">
+        <span class="scroll-cue__mouse"><i></i></span>
+        <span>Scroll</span>
+      </a>
     </section>
+
+    <!-- Hub: a map of the site, one card per page -->
+    <section class="section wrap" id="hub">
+      <header class="section__head">
+        <p class="eyebrow" data-reveal>Explore</p>
+        <h2 class="section__title" data-reveal>Six pages,<br /><span class="gradient-text">all connected.</span></h2>
+        <p class="section__lead" data-reveal>Each page has its own story and links into the others: the journey points to projects, skills point to the projects that use them, and every path ends at a conversation.</p>
+      </header>
+
+      <div class="hub" id="hubGrid">
+        <svg class="hub__links" id="hubLinks" aria-hidden="true">
+          <defs>
+            <linearGradient id="hubGrad" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1200" y2="600">
+              <stop offset="0" stop-color="#22d3ee" /><stop offset=".5" stop-color="#7c5cff" /><stop offset="1" stop-color="#ff5fa2" />
+            </linearGradient>
+          </defs>
+        </svg>
+
+        <a href="about.html" class="card glass hub-card hub-card--about" data-reveal data-spot data-node>
+          <div class="hub-card__top"><span class="hub-card__num">01 / About</span><span class="hub-card__go"><svg class="ico"><use href="assets/icons.svg#i-arrow"/></svg></span></div>
+          <h3>Student by day, builder by night</h3>
+          <p>Who I am, where I'm based and what I'm working on right now.</p>
+          <span class="link-arrow"><span>Meet me</span><svg class="ico"><use href="assets/icons.svg#i-arrow"/></svg></span>
+        </a>
+
+        <a href="journey.html" class="card glass hub-card hub-card--journey" data-reveal data-spot data-node>
+          <div class="hub-card__top"><span class="hub-card__num">02 / Journey</span><span class="hub-card__go"><svg class="ico"><use href="assets/icons.svg#i-arrow"/></svg></span></div>
+          <h3>Every project led to the next</h3>
+          <p>From a calculator in 2025 to a workshop's billing app and Smart India Hackathon.</p>
+          <span class="link-arrow"><span>Follow the timeline</span><svg class="ico"><use href="assets/icons.svg#i-arrow"/></svg></span>
+        </a>
+
+        <a href="skills.html" class="card glass hub-card hub-card--skills" data-reveal data-spot data-node>
+          <div class="hub-card__top"><span class="hub-card__num">03 / Skills</span><span class="hub-card__go"><svg class="ico"><use href="assets/icons.svg#i-arrow"/></svg></span></div>
+          <h3>End-to-end stack</h3>
+          <div class="mini-icons">
+            <img src="https://skillicons.dev/icons?i=react" alt="React" loading="lazy" />
+            <img src="https://skillicons.dev/icons?i=ts" alt="TypeScript" loading="lazy" />
+            <img src="https://skillicons.dev/icons?i=nodejs" alt="Node.js" loading="lazy" />
+            <img src="https://skillicons.dev/icons?i=postgres" alt="PostgreSQL" loading="lazy" />
+            <img src="https://skillicons.dev/icons?i=docker" alt="Docker" loading="lazy" />
+            <img src="https://skillicons.dev/icons?i=cpp" alt="C++" loading="lazy" />
+          </div>
+          <span class="link-arrow"><span>See the stack</span><svg class="ico"><use href="assets/icons.svg#i-arrow"/></svg></span>
+        </a>
+
+        <a href="projects.html" class="card glass hub-card hub-card--projects" data-reveal data-spot data-node>
+          <div class="hub-card__top"><span class="hub-card__num">04 / Projects</span><span class="hub-card__go"><svg class="ico"><use href="assets/icons.svg#i-arrow"/></svg></span></div>
+          <h3><span data-count="11" data-project-total>11</span> projects, all live</h3>
+          <p>Travel planners, a 3D book reader, café ordering, GST billing and civic-tech. Each one has its own page.</p>
+          <div class="stack-preview" aria-hidden="true">
+            <img src="assets/projects/shelfspace.webp" alt="" loading="lazy" />
+            <img src="assets/projects/little-lantern-cafe.webp" alt="" loading="lazy" />
+            <img src="assets/projects/himvoya.webp" alt="" loading="lazy" />
+          </div>
+          <span class="link-arrow"><span>Browse all projects</span><svg class="ico"><use href="assets/icons.svg#i-arrow"/></svg></span>
+        </a>
+
+        <a href="code.html" class="card glass hub-card hub-card--code" data-reveal data-spot data-node>
+          <div class="hub-card__top"><span class="hub-card__num">05 / Code</span><span class="hub-card__go"><svg class="ico"><use href="assets/icons.svg#i-arrow"/></svg></span></div>
+          <h3>Live stats</h3>
+          <div class="mini-ring">
+            <svg viewBox="0 0 64 64" aria-hidden="true">
+              <circle cx="32" cy="32" r="26" stroke="var(--stroke)" />
+              <circle cx="32" cy="32" r="26" stroke="url(#hubGrad)" stroke-dasharray="120 164" stroke-linecap="round" />
+            </svg>
+            <div><b data-count="56" data-lc="total">0</b><span class="muted">LeetCode solved</span></div>
+          </div>
+          <span class="link-arrow"><span>GitHub &amp; LeetCode</span><svg class="ico"><use href="assets/icons.svg#i-arrow"/></svg></span>
+        </a>
+
+        <a href="contact.html" class="card glass hub-card hub-card--contact" data-reveal data-spot data-node>
+          <div class="hub-card__top"><span class="hub-card__num">06 / Contact</span><span class="hub-card__go"><svg class="ico"><use href="assets/icons.svg#i-arrow"/></svg></span></div>
+          <h3>Let's build it</h3>
+          <p>Internships, freelance and hackathon teams. I reply within a day.</p>
+          <span class="link-arrow"><span>Say hello</span><svg class="ico"><use href="assets/icons.svg#i-arrow"/></svg></span>
+        </a>
+      </div>
+    </section>
+
+    <div class="wrap"><page-bridge></page-bridge></div>
   </main>
 
-  <footer class="footer">
-    <p>Designed &amp; built by <a href="https://github.com/digvijay165" target="_blank" rel="noopener">Digvijay</a> · © <span id="year"></span></p>
-    <p class="footer__links"><a href="mailto:digvijaysingh5360@gmail.com">Gmail</a> · <a href="https://instagram.com/digvijay.singh_" target="_blank" rel="noopener">Instagram</a> · <a href="https://github.com/digvijay165" target="_blank" rel="noopener">GitHub</a></p>
-    <p class="muted">Three.js · Vanilla JS · Hosted on GitHub Pages</p>
-  </footer>
-
+  <site-footer></site-footer>
+  <command-palette></command-palette>
   <script src="js/main.js" defer></script>
-  <script type="module" src="js/scene.js"></script>
 </body>
 </html>

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Journey — Digvijay Singh</title>
+  <meta name="description" content="Digvijay Singh's journey: from small browser tools in 2025 to React apps, billing software for a real workshop, Smart India Hackathon 2026 and full-stack builds." />
+  <meta name="theme-color" content="#05070f" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script>document.documentElement.classList.add("js"); try { const t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}</script>
+  <script src="js/data.js"></script>
+  <script src="js/components.js"></script>
+</head>
+<body data-page="journey" id="top">
+  <site-bg></site-bg>
+  <site-header></site-header>
+
+  <main id="main">
+    <section class="page-hero wrap">
+      <span class="page-num" aria-hidden="true">02</span>
+      <nav class="crumbs" aria-label="Breadcrumb" data-reveal><a href="index.html">Home</a><svg class="ico"><use href="assets/icons.svg#i-arrow"/></svg><span>Journey</span></nav>
+      <p class="eyebrow" data-reveal>Journey</p>
+      <h1 class="page-hero__title"><span class="line"><span class="split">Every project</span></span><span class="line"><span class="split gradient-text" style="--sd:.3s">led to the next.</span></span></h1>
+      <p class="page-hero__lead" data-reveal>From a scientific calculator in April 2025 to full-stack apps and a national hackathon. Every milestone links to the project behind it.</p>
+    </section>
+
+    <section class="wrap">
+      <ol class="timeline" id="timeline">
+        <li class="timeline__line" aria-hidden="true"><span id="timelineFill"></span></li>
+        <li class="tl" data-reveal>
+          <span class="tl__dot"></span>
+          <div class="tl__card glass" data-spot>
+            <p class="tl__when">Apr 2025</p>
+            <h3>Hello, GitHub</h3>
+            <p>Opened my GitHub and started shipping small browser tools in plain HTML, CSS and JavaScript, like <a href="project.html?p=calcu">Calcu</a>, a scientific calculator.</p>
+          </div>
+        </li>
+        <li class="tl" data-reveal>
+          <span class="tl__dot"></span>
+          <div class="tl__card glass" data-spot>
+            <p class="tl__when">Front-end</p>
+            <h3>Into React</h3>
+            <p>Built <a href="project.html?p=mosaic-market">Mosaic Market</a>, a React storefront with filters and a cart, then <a href="project.html?p=pulse-player">Pulse Player</a> and <a href="project.html?p=rewear">Rewear</a>. Learnt components, state and deploying to Vercel and Render.</p>
+          </div>
+        </li>
+        <li class="tl" data-reveal>
+          <span class="tl__dot"></span>
+          <div class="tl__card glass" data-spot>
+            <p class="tl__when">Real users</p>
+            <h3>Software for a real workshop</h3>
+            <p>Wrote <a href="project.html?p=forgeflow">ForgeFlow</a>, GST billing and stock for a machine-parts workshop. Type a part number, press Enter, and MRP and GST fill in.</p>
+          </div>
+        </li>
+        <li class="tl" data-reveal>
+          <span class="tl__dot"></span>
+          <div class="tl__card glass" data-spot>
+            <p class="tl__when">SIH 2026</p>
+            <h3>Smart India Hackathon</h3>
+            <p>Prototyped <a href="project.html?p=terra-trust">Terra Trust</a>: AI-verified land records with khasra search, a GIS map pin, a live application tracker and an English / हिंदी toggle.</p>
+          </div>
+        </li>
+        <li class="tl" data-reveal>
+          <span class="tl__dot"></span>
+          <div class="tl__card glass" data-spot>
+            <p class="tl__when">Full-stack</p>
+            <h3>Databases, auth &amp; Docker</h3>
+            <p>Shipped <a href="project.html?p=himvoya">Himvoya</a>, <a href="project.html?p=shelfspace">Shelfspace</a>, <a href="project.html?p=little-lantern-cafe">Little Lantern Café</a> and an <a href="project.html?p=bookstore">online bookstore</a> with Node.js, Express, PostgreSQL and SQLite.</p>
+          </div>
+        </li>
+        <li class="tl" data-reveal>
+          <span class="tl__dot"></span>
+          <div class="tl__card glass" data-spot>
+            <p class="tl__when"><span class="pulse"></span> Now</p>
+            <h3>Looking for my first internship</h3>
+            <p>Sharpening DSA in C++ and Java on <a href="code.html">LeetCode</a>, and going deeper into TypeScript and accessibility. If your team needs a front-end developer who ships, <a href="contact.html">let's talk</a>.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <div class="wrap"><page-bridge></page-bridge></div>
+  </main>
+
+  <site-footer></site-footer>
+  <command-palette></command-palette>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

@@ -3,20 +3,45 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>404 — Lost in space</title>
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <title>404 — Page not found</title>
+  <meta name="robots" content="noindex" />
+  <link rel="icon" href="/portfolio/assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@700;800&display=swap" rel="stylesheet" />
+  <!-- Self-contained: GitHub Pages serves this file at any missing path, so relative links can't be trusted. -->
   <style>
-    body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #05060a; color: #e6e9f2; font-family: ui-monospace, "JetBrains Mono", monospace; text-align: center; padding: 16px; }
-    h1 { font-size: clamp(5rem, 20vw, 10rem); margin: 0; background: linear-gradient(120deg, #22d3ee, #a855f7, #f472b6); -webkit-background-clip: text; background-clip: text; color: transparent; }
-    p { color: #8a91a8; }
-    a { display: inline-block; margin-top: 1.5rem; padding: .8rem 1.5rem; border-radius: 999px; background: linear-gradient(120deg, #22d3ee, #a855f7); color: #05060a; text-decoration: none; font-weight: 600; }
+    :root { --bg: #05070f; --text: #eef1ff; --muted: #9aa3c7; --stroke: rgba(255,255,255,.1); --a1: #7c5cff; --a2: #22d3ee; --a3: #ff5fa2; }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 16px; background: var(--bg); color: var(--text); font: 400 1rem/1.6 Inter, system-ui, sans-serif; overflow: hidden; }
+    .blob { position: fixed; width: 50vmax; height: 50vmax; border-radius: 50%; filter: blur(90px); opacity: .45; z-index: -1; animation: drift 20s ease-in-out infinite alternate; }
+    .blob:nth-child(1) { background: var(--a1); top: -20vmax; left: -15vmax; }
+    .blob:nth-child(2) { background: var(--a2); bottom: -25vmax; right: -15vmax; animation-delay: -8s; opacity: .3; }
+    @keyframes drift { to { transform: translate(6vmax, 8vmax) scale(1.1); } }
+    main { text-align: center; max-width: 560px; padding: 40px 28px; border-radius: 28px; border: 1px solid var(--stroke); background: linear-gradient(140deg, rgba(255,255,255,.09), rgba(255,255,255,.03)); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); }
+    h1 { margin: 0; font: 800 clamp(5rem, 22vw, 9rem)/1 Sora, sans-serif; letter-spacing: -.05em; background: linear-gradient(115deg, var(--a2), var(--a1) 50%, var(--a3)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    p { color: var(--muted); margin: 12px 0 26px; }
+    nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+    a { color: var(--text); text-decoration: none; padding: .6rem 1.1rem; border-radius: 999px; border: 1px solid var(--stroke); font-weight: 500; font-size: .92rem; transition: border-color .3s, background-color .3s; }
+    a:hover { border-color: var(--a1); background: rgba(124,92,255,.15); }
+    a.primary { color: #fff; border: 0; background: linear-gradient(115deg, var(--a2), var(--a1) 50%, var(--a3)); }
+    @media (prefers-reduced-motion: reduce) { .blob { animation: none; } }
   </style>
 </head>
 <body>
+  <div class="blob"></div><div class="blob"></div>
   <main>
     <h1>404</h1>
-    <p>&gt; route not found. This page drifted out of orbit.</p>
-    <a href="./">Back to home</a>
+    <p>This page drifted out of orbit. Pick up from one of these instead.</p>
+    <nav>
+      <a class="primary" href="/portfolio/">Home</a>
+      <a href="/portfolio/about.html">About</a>
+      <a href="/portfolio/journey.html">Journey</a>
+      <a href="/portfolio/skills.html">Skills</a>
+      <a href="/portfolio/projects.html">Projects</a>
+      <a href="/portfolio/code.html">Code</a>
+      <a href="/portfolio/contact.html">Contact</a>
+    </nav>
   </main>
 </body>
 </html>

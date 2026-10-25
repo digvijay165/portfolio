@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects — Digvijay Singh</title>
+  <meta name="description" content="Projects by Digvijay Singh: Himvoya, Shelfspace, Little Lantern Café, ForgeFlow, an online bookstore, Terra Trust (SIH 2026) and more." />
+  <meta name="theme-color" content="#05070f" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script>document.documentElement.classList.add("js"); try { const t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}</script>
+  <script src="js/data.js"></script>
+  <script src="js/components.js"></script>
+</head>
+<body data-page="projects" id="top">
+  <site-bg></site-bg>
+  <site-header></site-header>
+
+  <main id="main">
+    <section class="page-hero wrap">
+      <span class="page-num" aria-hidden="true">04</span>
+      <nav class="crumbs" aria-label="Breadcrumb" data-reveal><a href="index.html">Home</a><svg class="ico"><use href="assets/icons.svg#i-arrow"/></svg><span>Projects</span></nav>
+      <p class="eyebrow" data-reveal>Projects</p>
+      <h1 class="page-hero__title"><span class="line"><span class="split">Things I've</span></span><span class="line"><span class="split gradient-text" style="--sd:.25s">built &amp; shipped.</span></span></h1>
+      <p class="page-hero__lead" data-reveal>Everything I've shipped, and every one of them is live. Open any card for its own page with the story, the stack and the links.</p>
+    </section>
+
+    <section class="wrap">
+      <div class="section__head section__head--row" style="margin-bottom:32px">
+        <div class="filters glass" role="tablist" aria-label="Filter projects" data-reveal>
+          <span class="filters__pill" id="filterPill" aria-hidden="true"></span>
+          <button role="tab" type="button" aria-selected="true" data-filter="all">All</button>
+          <button role="tab" type="button" aria-selected="false" data-filter="fullstack">Full-stack</button>
+          <button role="tab" type="button" aria-selected="false" data-filter="frontend">Front-end</button>
+          <button role="tab" type="button" aria-selected="false" data-filter="tool">Tools</button>
+        </div>
+        <p class="muted" data-reveal><b id="projectCount">11</b> projects</p>
+      </div>
+      <p class="tech-filter" id="techFilter" hidden>
+        Showing projects built with <b id="techName"></b>
+        <button type="button" id="techClear">Clear <svg class="ico"><use href="assets/icons.svg#i-close"/></svg></button>
+        <a class="link-arrow" href="skills.html"><span>Back to skills</span></a>
+      </p>
+      <div class="projects" data-projects="all"></div>
+    </section>
+
+    <div class="wrap" style="margin-top:80px"><page-bridge></page-bridge></div>
+  </main>
+
+  <site-footer></site-footer>
+  <command-palette></command-palette>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
