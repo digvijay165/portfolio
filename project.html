@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Project — Digvijay Singh</title>
+  <meta name="description" content="A project by Digvijay Singh: what it does, how it's built and where to try it." />
+  <meta name="theme-color" content="#05070f" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script>document.documentElement.classList.add("js"); try { const t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}</script>
+  <script src="js/data.js"></script>
+  <script src="js/components.js"></script>
+</head>
+<body data-page="project" id="top">
+  <site-bg></site-bg>
+  <site-header></site-header>
+
+  <main id="main">
+    <section class="page-hero wrap" style="padding-bottom:36px">
+      <nav class="crumbs" aria-label="Breadcrumb" data-reveal>
+        <a href="index.html">Home</a><svg class="ico"><use href="assets/icons.svg#i-arrow"/></svg>
+        <a href="projects.html">Projects</a><svg class="ico"><use href="assets/icons.svg#i-arrow"/></svg>
+        <span id="pdCrumb">Project</span>
+      </nav>
+      <p class="eyebrow" id="pdKind" data-reveal>Project</p>
+      <h1 class="page-hero__title" id="pdTitle">Loading…</h1>
+      <p class="page-hero__lead" id="pdSummary" data-reveal></p>
+    </section>
+
+    <section class="wrap">
+      <div class="pd">
+        <div>
+          <div class="pd__media" id="pdMedia" data-reveal="zoom"></div>
+          <div class="pd__body">
+            <article class="card glass" data-reveal data-spot>
+              <h2>Highlights</h2>
+              <ul class="pd__points" id="pdPoints"></ul>
+            </article>
+            <article class="card glass" data-reveal data-spot>
+              <h2>Built with</h2>
+              <p class="muted" style="margin-bottom:14px">Tap a technology to see every project that uses it.</p>
+              <div class="tags" id="pdTech"></div>
+            </article>
+          </div>
+        </div>
+        <aside class="pd__side">
+          <div class="card glass" data-reveal data-spot>
+            <ul class="pd__facts" id="pdFacts"></ul>
+          </div>
+          <div id="pdActions" style="display:grid;gap:10px" data-reveal></div>
+        </aside>
+      </div>
+
+      <nav class="pd__nav" id="pdNav" aria-label="More projects"></nav>
+
+      <div class="related">
+        <h2 data-reveal>Related projects</h2>
+        <div class="projects" id="pdRelated"></div>
+      </div>
+    </section>
+
+    <div class="wrap" style="margin-top:60px"><page-bridge from="projects"></page-bridge></div>
+  </main>
+
+  <site-footer></site-footer>
+  <command-palette></command-palette>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

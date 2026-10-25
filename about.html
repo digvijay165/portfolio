@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About — Digvijay Singh</title>
+  <meta name="description" content="About Digvijay Singh: a student and front-end developer from Kota, India, building fast, friendly web apps with React, TypeScript, Node.js and Postgres." />
+  <meta name="theme-color" content="#05070f" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script>document.documentElement.classList.add("js"); try { const t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}</script>
+  <script src="js/data.js"></script>
+  <script src="js/components.js"></script>
+</head>
+<body data-page="about" id="top">
+  <site-bg></site-bg>
+  <site-header></site-header>
+
+  <main id="main">
+    <section class="page-hero wrap">
+      <span class="page-num" aria-hidden="true">01</span>
+      <nav class="crumbs" aria-label="Breadcrumb" data-reveal><a href="index.html">Home</a><svg class="ico"><use href="assets/icons.svg#i-arrow"/></svg><span>About</span></nav>
+      <p class="eyebrow" data-reveal>About me</p>
+      <h1 class="page-hero__title"><span class="line"><span class="split">Student by day,</span></span><span class="line"><span class="split gradient-text" style="--sd:.3s">builder by night.</span></span></h1>
+      <p class="page-hero__lead" data-reveal>I'm Digvijay, a front-end developer from Kota, India. I like apps that <em>just run</em>: no installs, no sign-ups, no waiting.</p>
+    </section>
+
+    <section class="wrap">
+      <div class="bento">
+        <article class="card glass bento__bio" data-reveal data-spot>
+          <h2 class="h3" style="font-size:1.6rem;margin-bottom:16px">Hey, I'm Digvijay 👋</h2>
+          <p>I'm a <strong>student and front-end developer from Kota, India</strong>. Most of what I build starts as a real problem
+            someone around me has, like billing at a machine-parts workshop or planning a trek in the Himalayas.</p>
+          <p>Today I build full-stack with <strong>React, TypeScript, Node.js and Postgres</strong>, and I practise
+            <strong>data structures &amp; algorithms in C++ and Java</strong> every week.</p>
+          <p>I care about the small things: pages that load fast, keyboards that work, and interfaces that read well in Hindi as well as English.</p>
+          <div class="bento__links">
+            <a href="projects.html" class="link-arrow"><span>See what I've shipped</span><svg class="ico"><use href="assets/icons.svg#i-arrow"/></svg></a>
+            <a href="journey.html" class="link-arrow"><span>Read my journey</span><svg class="ico"><use href="assets/icons.svg#i-arrow"/></svg></a>
+          </div>
+        </article>
+
+        <article class="card glass bento__place" data-reveal data-spot>
+          <div class="place__map" aria-hidden="true"><span class="place__ping"></span></div>
+          <p class="card__label"><svg class="ico"><use href="assets/icons.svg#i-pin"/></svg> Based in</p>
+          <h3>Kota, Rajasthan</h3>
+          <p class="mono muted"><span id="localTime">--:--</span> IST · <span id="localStatus">online</span></p>
+        </article>
+
+        <article class="card glass bento__now" data-reveal data-spot>
+          <p class="card__label"><span class="pulse"></span> Currently</p>
+          <ul class="now-list">
+            <li><b>Building</b> <a href="project.html?p=himvoya">Himvoya</a>, an India-first travel planner</li>
+            <li><b>Polishing</b> <a href="project.html?p=terra-trust">Terra Trust</a> for SIH 2026</li>
+            <li><b>Grinding</b> DSA on <a href="code.html">LeetCode</a></li>
+          </ul>
+        </article>
+
+        <article class="card glass bento__stats" data-reveal data-spot>
+          <div class="stat"><b data-count="13" data-gh="repos">0</b><span>Public repos</span></div>
+          <div class="stat"><b data-count="10" data-suffix="+">0</b><span>Live apps</span></div>
+          <div class="stat"><b data-count="56" data-lc="total">0</b><span>DSA problems solved</span></div>
+          <div class="stat"><b data-count="1">0</b><span>National hackathon</span></div>
+        </article>
+
+        <article class="card glass bento__learn" data-reveal data-spot>
+          <p class="card__label">Learning next</p>
+          <div class="tags">
+            <span>Advanced TypeScript</span><span>Three.js</span><span>Accessibility</span><span>System design</span><span>Docker</span>
+          </div>
+        </article>
+
+        <article class="card glass bento__quote" data-reveal data-spot>
+          <p class="quote">“The best UX starts <span class="gradient-text">before the first click.</span>”</p>
+          <p class="muted">So my apps load fast, keep working when the network doesn't, and never ask for more than they need.</p>
+        </article>
+      </div>
+    </section>
+
+    <div class="wrap"><page-bridge></page-bridge></div>
+  </main>
+
+  <site-footer></site-footer>
+  <command-palette></command-palette>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

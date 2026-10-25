@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Code — Digvijay Singh</title>
+  <meta name="description" content="Live GitHub and LeetCode stats for Digvijay Singh: repositories, languages, recent pushes and problems solved." />
+  <meta name="theme-color" content="#05070f" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script>document.documentElement.classList.add("js"); try { const t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}</script>
+  <script src="js/data.js"></script>
+  <script src="js/components.js"></script>
+</head>
+<body data-page="code" id="top">
+  <site-bg></site-bg>
+  <site-header></site-header>
+
+  <main id="main">
+    <section class="page-hero wrap">
+      <span class="page-num" aria-hidden="true">05</span>
+      <nav class="crumbs" aria-label="Breadcrumb" data-reveal><a href="index.html">Home</a><svg class="ico"><use href="assets/icons.svg#i-arrow"/></svg><span>Code</span></nav>
+      <p class="eyebrow" data-reveal>Code</p>
+      <h1 class="page-hero__title"><span class="line"><span class="split">Live from</span></span><span class="line"><span class="split gradient-text" style="--sd:.2s">GitHub &amp; LeetCode.</span></span></h1>
+      <p class="page-hero__lead" data-reveal>These numbers load straight from the GitHub and LeetCode APIs each time you visit, so they're always current.</p>
+    </section>
+
+    <section class="wrap">
+      <div class="code-grid">
+        <article class="card glass gh" data-reveal data-spot>
+          <header class="gh__head">
+            <img src="https://avatars.githubusercontent.com/u/208164292?v=4" alt="" width="56" height="56" />
+            <div>
+              <h2 class="h3" style="font-size:1.2rem">@digvijay165</h2>
+              <p class="muted" id="ghBio">Student &amp; front-end developer from Kota, India</p>
+            </div>
+            <a class="btn btn--glass btn--sm magnetic" href="https://github.com/digvijay165" target="_blank" rel="noopener"><svg class="ico"><use href="assets/icons.svg#i-github"/></svg><span>Follow</span></a>
+          </header>
+          <div class="gh__stats">
+            <div><b id="ghRepos" data-count="13">0</b><span>Repos</span></div>
+            <div><b id="ghFollowers" data-count="2">0</b><span>Followers</span></div>
+            <div><b id="ghLangs" data-count="4">0</b><span>Languages</span></div>
+          </div>
+          <p class="card__label">Languages across my repos</p>
+          <div class="langbar" id="langBar"></div>
+          <ul class="langs" id="langList"></ul>
+          <p class="card__label">Recently pushed</p>
+          <ul class="repos" id="repoList"><li class="muted">Loading repositories…</li></ul>
+        </article>
+
+        <article class="card glass lc" data-reveal data-spot>
+          <header class="lc__head">
+            <span class="float-card__icon" style="--c:#ffa116"><svg class="ico"><use href="assets/icons.svg#i-leetcode"/></svg></span>
+            <div>
+              <h2 class="h3" style="font-size:1.2rem">LeetCode</h2>
+              <p class="muted">DIGVIJAY5360 · C++ &amp; Java</p>
+            </div>
+          </header>
+          <div class="lc__body">
+            <div class="ring" id="lcRing">
+              <svg viewBox="0 0 120 120" aria-hidden="true">
+                <circle class="ring__bg" cx="60" cy="60" r="50" />
+                <circle class="ring__seg ring__seg--easy" cx="60" cy="60" r="50" />
+                <circle class="ring__seg ring__seg--med" cx="60" cy="60" r="50" />
+                <circle class="ring__seg ring__seg--hard" cx="60" cy="60" r="50" />
+              </svg>
+              <div class="ring__center"><b id="lcTotal">56</b><span>solved</span></div>
+            </div>
+            <ul class="lc__levels">
+              <li style="--c:#2dd4bf"><span>Easy</span><b id="lcEasy">14</b><i><em data-level="easy"></em></i></li>
+              <li style="--c:#fbbf24"><span>Medium</span><b id="lcMed">28</b><i><em data-level="med"></em></i></li>
+              <li style="--c:#f43f5e"><span>Hard</span><b id="lcHard">14</b><i><em data-level="hard"></em></i></li>
+            </ul>
+          </div>
+          <p class="muted lc__note" id="lcNote">Half my solves are medium, and a quarter are hard.</p>
+          <a class="btn btn--glass btn--sm magnetic" href="https://leetcode.com/u/DIGVIJAY5360/" target="_blank" rel="noopener"><span>Open LeetCode profile</span><svg class="ico"><use href="assets/icons.svg#i-external"/></svg></a>
+        </article>
+
+        <div class="code-cards">
+          <a href="https://github.com/digvijay165/LeetCode" target="_blank" rel="noopener" class="card glass" data-reveal data-spot data-tilt>
+            <span class="float-card__icon" style="--c:#ffa116"><svg class="ico"><use href="assets/icons.svg#i-code"/></svg></span>
+            <h3>Solutions repo</h3>
+            <p>Every accepted LeetCode solution, synced to GitHub automatically.</p>
+          </a>
+          <a href="projects.html" class="card glass" data-reveal data-spot data-tilt>
+            <span class="float-card__icon" style="--c:#22d3ee"><svg class="ico"><use href="assets/icons.svg#i-grid"/></svg></span>
+            <h3>Projects behind the repos</h3>
+            <p>See what each repository actually does, with screenshots and live links.</p>
+          </a>
+          <a href="skills.html" class="card glass" data-reveal data-spot data-tilt>
+            <span class="float-card__icon" style="--c:#7c5cff"><svg class="ico"><use href="assets/icons.svg#i-layers"/></svg></span>
+            <h3>Languages in context</h3>
+            <p>How these languages map to my stack, and where I use each one.</p>
+          </a>
+        </div>
+      </div>
+
+      <article class="card glass contrib" style="margin-top:18px" data-reveal data-spot>
+        <p class="card__label">Contributions, past year</p>
+        <img id="contribImg" src="https://ghchart.rshah.org/7c5cff/digvijay165" alt="Digvijay's GitHub contribution graph for the past year" loading="lazy" />
+      </article>
+    </section>
+
+    <div class="wrap" style="margin-top:80px"><page-bridge></page-bridge></div>
+  </main>
+
+  <site-footer></site-footer>
+  <command-palette></command-palette>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

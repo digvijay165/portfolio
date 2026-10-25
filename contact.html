@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — Digvijay Singh</title>
+  <meta name="description" content="Contact Digvijay Singh for internships, freelance work and hackathon teams. Email, LinkedIn, GitHub, LeetCode and Instagram." />
+  <meta name="theme-color" content="#05070f" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script>document.documentElement.classList.add("js"); try { const t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}</script>
+  <script src="js/data.js"></script>
+  <script src="js/components.js"></script>
+</head>
+<body data-page="contact" id="top">
+  <site-bg></site-bg>
+  <site-header></site-header>
+
+  <main id="main">
+    <section class="page-hero wrap">
+      <span class="page-num" aria-hidden="true">06</span>
+      <nav class="crumbs" aria-label="Breadcrumb" data-reveal><a href="index.html">Home</a><svg class="ico"><use href="assets/icons.svg#i-arrow"/></svg><span>Contact</span></nav>
+      <p class="eyebrow" data-reveal>Contact</p>
+      <h1 class="page-hero__title"><span class="line"><span class="split">Got an idea?</span></span><span class="line"><span class="split gradient-text" style="--sd:.25s">Let's build it.</span></span></h1>
+      <p class="page-hero__lead" data-reveal>I'm open to internships, freelance work and hackathon teams. I usually reply within a day.</p>
+    </section>
+
+    <section class="wrap">
+      <div class="contact__grid">
+        <form class="card glass form" id="contactForm" data-reveal novalidate>
+          <div class="field">
+            <input id="fName" name="name" type="text" placeholder=" " autocomplete="name" required />
+            <label for="fName">Your name</label>
+          </div>
+          <div class="field">
+            <input id="fEmail" name="email" type="email" placeholder=" " autocomplete="email" required />
+            <label for="fEmail">Your email</label>
+          </div>
+          <fieldset class="field" style="border:0;padding:0;margin:0">
+            <legend class="field__title">I'm reaching out about</legend>
+            <div class="choice">
+              <label><input type="radio" name="topic" value="Internship" checked /><span>Internship</span></label>
+              <label><input type="radio" name="topic" value="Freelance project" /><span>Freelance</span></label>
+              <label><input type="radio" name="topic" value="Hackathon team" /><span>Hackathon</span></label>
+              <label><input type="radio" name="topic" value="Just saying hi" /><span>Just hi</span></label>
+            </div>
+          </fieldset>
+          <div class="field">
+            <textarea id="fMsg" name="message" rows="5" placeholder=" " required></textarea>
+            <label for="fMsg">Your message</label>
+          </div>
+          <button class="btn btn--primary btn--block magnetic" type="submit"><span>Send message</span><svg class="ico"><use href="assets/icons.svg#i-send"/></svg></button>
+          <p class="form__note muted">Opens your email app with everything filled in, ready to send.</p>
+        </form>
+
+        <div class="contact__side">
+          <button class="card glass email-card" id="copyEmail" type="button" data-reveal data-spot>
+            <span class="float-card__icon" style="--c:#7c5cff"><svg class="ico"><use href="assets/icons.svg#i-mail"/></svg></span>
+            <span class="email-card__text"><small>Email me at</small><b>digvijaysingh5360@gmail.com</b></span>
+            <span class="email-card__copy"><svg class="ico"><use href="assets/icons.svg#i-copy"/></svg><em>Copy</em></span>
+          </button>
+          <div class="socials">
+            <a class="social glass" href="https://www.linkedin.com/in/digvijay-singh-a188b1382/" target="_blank" rel="noopener" style="--c:#0a66c2" data-reveal data-tilt>
+              <svg class="ico"><use href="assets/icons.svg#i-linkedin"/></svg><b>LinkedIn</b><small>Digvijay Singh</small><svg class="ico social__go"><use href="assets/icons.svg#i-external"/></svg>
+            </a>
+            <a class="social glass" href="https://github.com/digvijay165" target="_blank" rel="noopener" style="--c:#a5b4fc" data-reveal data-tilt>
+              <svg class="ico"><use href="assets/icons.svg#i-github"/></svg><b>GitHub</b><small>@digvijay165</small><svg class="ico social__go"><use href="assets/icons.svg#i-external"/></svg>
+            </a>
+            <a class="social glass" href="https://leetcode.com/u/DIGVIJAY5360/" target="_blank" rel="noopener" style="--c:#ffa116" data-reveal data-tilt>
+              <svg class="ico"><use href="assets/icons.svg#i-leetcode"/></svg><b>LeetCode</b><small>DIGVIJAY5360</small><svg class="ico social__go"><use href="assets/icons.svg#i-external"/></svg>
+            </a>
+            <a class="social glass" href="https://www.instagram.com/digvijay.singh_" target="_blank" rel="noopener" style="--c:#e1306c" data-reveal data-tilt>
+              <svg class="ico"><use href="assets/icons.svg#i-instagram"/></svg><b>Instagram</b><small>@digvijay.singh_</small><svg class="ico social__go"><use href="assets/icons.svg#i-external"/></svg>
+            </a>
+          </div>
+          <article class="card glass" data-reveal data-spot>
+            <p class="card__label"><span class="pulse"></span> Availability</p>
+            <ul class="availability" style="list-style:none;margin:0;padding:0">
+              <li><svg class="ico"><use href="assets/icons.svg#i-check"/></svg> Internships, remote or in Rajasthan</li>
+              <li><svg class="ico"><use href="assets/icons.svg#i-check"/></svg> Freelance websites and web apps</li>
+              <li><svg class="ico"><use href="assets/icons.svg#i-check"/></svg> Hackathon teams</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap">
+      <header class="section__head">
+        <p class="eyebrow" data-reveal>Before you write</p>
+        <h2 class="section__title" data-reveal>Quick answers</h2>
+      </header>
+      <div class="faq">
+        <details class="glass" data-reveal><summary>What kind of work are you looking for?</summary><p>Front-end or full-stack internships, where I can ship real features with React and TypeScript. I'm also happy to take on small freelance builds. <a class="link-arrow" href="projects.html"><span>See past work</span></a></p></details>
+        <details class="glass" data-reveal><summary>What's your strongest stack?</summary><p>React and TypeScript on the front, Node.js and Express with PostgreSQL or SQLite on the back. <a class="link-arrow" href="skills.html"><span>Full stack, linked to projects</span></a></p></details>
+        <details class="glass" data-reveal><summary>Can I see your code?</summary><p>Yes, almost everything is public on GitHub, and the stats are live on my code page. <a class="link-arrow" href="code.html"><span>Open the code page</span></a></p></details>
+        <details class="glass" data-reveal><summary>How fast do you reply?</summary><p>Usually within a day. Email is quickest; LinkedIn works too.</p></details>
+      </div>
+    </section>
+
+    <div class="wrap"><page-bridge></page-bridge></div>
+  </main>
+
+  <site-footer></site-footer>
+  <command-palette></command-palette>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
